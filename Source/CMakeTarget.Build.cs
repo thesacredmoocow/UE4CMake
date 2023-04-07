@@ -187,7 +187,7 @@ public class CMakeTargetInst
             {
                 if(String.IsNullOrEmpty(include))
                     continue;
-
+                    
                 rules.PublicIncludePaths.Add(include);
             }
         }
@@ -319,7 +319,7 @@ public class CMakeTargetInst
             }
         }
 
-        var buildCommand = CreateCMakeBuildCommand(m_buildPath, buildType);
+        var buildCommand = CreateCMakeInstallCommand(m_buildPath, buildType);
         var buildCode = ExecuteCommandSync(buildCommand);
 
         if(buildCode!=0)
